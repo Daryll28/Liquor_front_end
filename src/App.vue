@@ -5,10 +5,27 @@
 
 <script>
 import Nav from './components/nav.vue'
-
+import axios from "axios"
 export default {
   name: 'App',
-  components: { Nav }
+  components: { Nav },
+  data() {
+    return{
+      baseUrl: "https://project---312-3.herokuapp.com/",
+      products: [],
+      categories: []
+    }
+  },
+  methods: {
+    async fetchData() {
+      await axios.get(this.baseUrl + "category")
+      .then(res => {
+        this.categories = res.data
+      }).catch((err) => console.log('err', err));
+    }
+  },
+  mounted() {
+  }
 }
 </script>
 
