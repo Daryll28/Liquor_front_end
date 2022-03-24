@@ -14,7 +14,7 @@
   <div class="carousel-inner mb-5 shadow-1-strong rounded-3">
     <div class="carousel-item active">
       <img
-        src="https://mdbcdn.b-cdn.net/img/Photos/Slides/img%20(88).webp"
+        src=""
         class="d-block w-100"
         alt="..."
       />

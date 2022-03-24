@@ -3,7 +3,7 @@
 <div class="container-fluid h-custom">
     
     <div class="divider d-flex align-items-center my-3">
-    <p class="text-center fw-bold mx-3 mb-0" style="font-size:35px">Welcome to D's Liquor Login</p>
+    <p class="text-center fw-bold mx-3 mb-0" style="font-size:35px">Welcome to D's Liquor </p>
     </div>
     <div class="row d-flex justify-content-center align-items-center h-100">
     <div class="col-md-9 col-lg-6 col-xl-5">
@@ -13,7 +13,7 @@
     <div class="col-md-8 col-lg-6 col-xl-4 offset-xl-1">
 
 
-    <form @submit.prevent="home">
+    <form @submit.prevent="login">
 
 
 
@@ -75,44 +75,100 @@ Not to sale to the persons under the age of 18<i class="flag flag-south-africa">
 
 
 <script>
-import landing from './landing.vue'
-
-
+// import axios from "axios";
 export default {
-  name: 'Home',
-  components: {
-    landing
-  }
-}
+  name: "login",
+  props: ["baseURL"],
+  data() {
+    return {
+      email: "",
+      password: "",
+      isAdmin: false,
+    };
+  },
+   methods: {
+//       async login() {
+//           const user = {
+//               email: this.email,
+//         password: this.password,
+//       };
 
-// login() 
-// {
-//       fetch("https://project---312-3.herokuapp.com/users", {
-//         method: "PATCH",
-//         body: JSON.stringify({
-//           email: this.email,
-//           password: this.password,
-//         }),
-//         headers: {
-//           "Content-type": "application/json; charset=UTF-8",
-//         },
-//       })
-//         .then((response) => response.json())
-//         .then((json) => {
-//           if(json.jwt){
-//             localStorage.setItem("jwt", json.jwt);
-//           }
-//           if(localStorage.getItem("jwt")){
-//             this.$router.push({ name: "Profile" });
+
+//       await axios
+//       .patch (`https://my-projecto-1.herokuapp.com/users/login`, user)
+//       .then((res) => {
+//           localStorage.setItem("jwt", res.data.jwt);
+//         axios
+//         .get(`https://my-projecto-1.herokuapp.com/users/:id`, {
+//             headers: {
+//                 "Content-Type": "application/json",
+//             Authorization: `Bearer ${localStorage.getItem("jwt")}`,
+//           },
+//         })
+
+
+//         .then((res) => {
+//             if(res.data.isAdmin == true){
+//               alert("You are admin");
+//           this.isAdmin = res.data.isAdmin;
+//           this.$router.push({ name: "Admin" });
 //           }
 //           else{
-//             alert("Incorrect Credentials");
+//               this.$router.push({ name: "Home" });
 //           }
-//         })
+
+//      })
 //         .catch((err) => {
-//           alert(err);
-//         });
-//     }
+//             console.log(err);
+//         })
+//    })
+
+//           .catch((err) => {
+//             console.log(err);
+//       });
+//     },
+//   },
+//   mounted() {},
+// };
+
+login() 
+{
+  const person = {
+          email: this.email,
+          password: this.password,
+        }
+
+        console.log(person)
+  fetch("https://my-projecto-1.herokuapp.com/users/login", {
+        method: 'post',
+        body: JSON.stringify(person),
+        headers: {
+          "Content-type": "application/json; charset=UTF-8",
+        },
+        // mode: "no-cors"
+      })
+        .then((response) => response.json())
+        .then((json) => {
+          if(json.jwt){
+            localStorage.setItem("jwt", JSON.stringify(json.jwt));
+          }
+          if(localStorage.getItem("jwt")){
+            this.$router.push({ name: "Home" });
+            alert('You logged in successfully')
+          }
+          else{
+            alert("Incorrect Credentials try again");
+          }
+        })
+        .catch((err) => {
+          alert(err);
+        });
+    },
+
+          },
+          };
+  
+         
 
 </script>
 
