@@ -151,8 +151,6 @@ login()
         .then((json) => {
           if(json.jwt){
             localStorage.setItem("jwt", JSON.stringify(json.jwt));
-          }
-          if(localStorage.getItem("jwt")){
             this.$router.push({ name: "Home" });
             alert('You logged in successfully')
           }

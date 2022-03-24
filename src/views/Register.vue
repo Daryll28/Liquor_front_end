@@ -115,8 +115,6 @@ register()
         .then((json) => {
           if(json.jwt){
             localStorage.setItem("jwt", json.jwt);
-          }
-          if(localStorage.getItem("jwt")){
             this.$router.push({ name: "Home" });
             alert('You are now registered')
           }
