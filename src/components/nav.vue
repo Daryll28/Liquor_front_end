@@ -1,5 +1,5 @@
 <template>
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
+<nav class="navbar navbar-expand-lg navbar-light py-4 px-4 px-xl-5 bg-primary">
   <!-- Container wrapper -->
   <div class="container-fluid">
     <!-- Toggle button -->
@@ -28,13 +28,16 @@
         <li class="nav-item">
           <a class="nav-link" href="/about">About</a>
         </li>
-        <!-- Navbar dropdown -->
- 
-        <li class="nav-item">
-          <a class="nav-link disabled"
-            >Products</a
-          >
+                <li class="nav-item">
+          <a class="nav-link" href="/products">Products</a>
         </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/contact">Contact</a>
+        </li>
+        
+
+        <!-- Navbar dropdown -->
+
 
                <li class="nav-item dropdown">
           <a
@@ -57,9 +60,6 @@
             </li>
 
             <li><hr class="dropdown-divider" /></li>
-            <li>
-              <a class="dropdown-item" href="#">Contact</a>
-            </li>
           </ul>
         </li>
       </ul>
@@ -69,17 +69,27 @@
   </div>
   <!-- Container wrapper -->
 </nav>
+
+
 </template>
 
 <style>
 
 .navbar{
   height: 88px;
+
+}
+#navs{
+  display: none;
 }
 .nav-item:hover{
 text-decoration: underline;
-font-size: 22px
-
+font-size: 22px;
 }
+.nav-link{
+  color: white !important
+}
+
+
 </style>
 

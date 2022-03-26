@@ -1,5 +1,5 @@
 <template>
-<section>
+<section class="background">
 <div class="container-fluid h-custom">
     
     <div class="divider d-flex align-items-center my-3">
@@ -63,7 +63,7 @@
     </div>
 
         <div class="text-white mb-3 mb-md-0">
-Not to sale to the persons under the age of 18<i class="flag flag-south-africa"></i>
+Not for sale to the persons under the age of 18<i class="flag flag-south-africa"></i>
 </div>
 
 </div>
@@ -151,7 +151,7 @@ login()
         .then((json) => {
           if(json.jwt){
             localStorage.setItem("jwt", JSON.stringify(json.jwt));
-            this.$router.push({ name: "Home" });
+            this.$router.push({ name: "Products" });
             alert('You logged in successfully')
           }
           else{
@@ -207,4 +207,6 @@ footer {
     height: 100%;
   }
 }
+
+
 </style>

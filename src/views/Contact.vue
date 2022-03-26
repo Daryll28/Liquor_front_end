@@ -24,7 +24,8 @@
         <div class="col-lg-6 mb-5 mb-lg-0">
           <div class="card">
             <div class="card-body py-5 px-md-5">
-              <form>
+              
+              <form @submit.prevent="handleSubmit">
                 <!-- 2 column grid layout with text inputs for the first and last names -->
                 <div class="row">
                   <div class="col-md-6 mb-4">
@@ -37,6 +38,8 @@
                             id="form3Example1"
                             class="form-control"
                             style="border:1px solid black"
+                            v-model="firstName"
+                            required  
                             />
 
                     </div>
@@ -51,6 +54,8 @@
                             id="form3Example2"
                             class="form-control"
                             style="border:1px solid black"
+                            v-model="lastName"
+                            required
                             />
 
                     </div>
@@ -67,6 +72,8 @@
                         id="form3Example3"
                         class="form-control"
                         style="border:1px solid black"
+                        v-model="email"
+                        required
                         />
 
                 </div>
@@ -74,13 +81,15 @@
                 <!-- Password input -->
                 <div class="form-outline mb-4">
                                       <label class="form-label" for="form3Example4"
-                        >Password</label
+                        >Message</label
                     >
                   <input
-                        type="password"
+                        type="text"
                         id="form3Example4"
                         class="form-control"
                         style="border:1px solid black"
+                        v-model="message"
+                        required
                         />
 
                 </div>
@@ -124,8 +133,49 @@ Not to sale to the persons under the age of 18<i class="flag flag-south-africa">
 
 <script>
 export default {
-    
+  data(){
+    return{
+  firstName:"",
+  lastName: "",
+  email:"",
+  message:"",
+
+    }
+  },
+  methods:{
+     
+  async  handleSubmit(){
+    try{
+ fetch('https://my-projecto-1.herokuapp.com/contact', {
+  method: 'POST',
+  body: JSON.stringify({
+  firstName: this.firstName,
+  lastName: this.lastName,
+  email: this.email,
+  message: this.message
+  }),
+  headers: {
+    'Content-type': 'application/json; charset=UTF-8',
+  },
+})
+  .then((json) => {
+   
+    alert("Message Sent")
+   this.firstName = '',
+      this.lastName = '',
+    this.email = '',
+    this.message = ''
+  });
+    }
+  catch(err)  {
+          alert(err);
+
+        }
+  }
+  }
 }
+
+
 </script>
 
 

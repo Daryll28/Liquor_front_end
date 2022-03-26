@@ -1,116 +1,344 @@
 <template>
-<!--
-<div class="grid Z25uR9U5 fixed-fluid ncss-container css-1gfb4pw css-1vtn5w7" >
- 
-  <img class="front" src="../assets/images/Absolute.jpg" alt="">  
-  <img class="front" src="../assets/images/black_velvet.jpg" alt="">
-  <img class="front" src="../assets/images/pink_gin.jpg" alt="">
-</div> -->
- <div style="text-decoration:underline"><h1>Welcome to D's Liquor Store </h1></div>
-<div class="container">
-  <!-- Carousel wrapper -->
-<div id="carouselMDExample" class="carousel slide carousel-fade" data-mdb-ride="carousel">
-  <!-- Slides -->
-  <div class="carousel-inner mb-5 shadow-1-strong rounded-3">
-    <div class="carousel-item active">
-      <img
-        src=""
-        class="d-block w-100"
-        alt="..."
-      />
-    </div>
-    <div class="carousel-item">
-      <img
-        src="https://mdbcdn.b-cdn.net/img/Photos/Slides/img%20(121).webp"
-        class="d-block w-100"
-        alt="..."
-      />
-    </div>
-    <div class="carousel-item">
-      <img
-        src="https://mdbcdn.b-cdn.net/img/Photos/Slides/img%20(31).webp"
-        class="d-block w-100"
-        alt="..."
-      />
-    </div>
-  </div>
-  <!-- Slides -->
+<section class="background">
+  <div id="homepage" class="text-center container py-5">
+    <h1>Welcome to D's Liquor store</h1>
+    <h4 class="mt-4 mb-5"><strong>Bestsellers</strong></h4>
+    <div class="row">
+      <div class="col-lg-4 col-md-12 mb-4">
+        <div class="card">
+          <div
+            class="bg-image hover-zoom ripple ripple-surface ripple-surface-light"
+            data-mdb-ripple-color="light"
+          >
+            <img
+              src="../assets/images/Absolute.jpg"
+              class="w-100"
+            />
+            <a href="#!">
+              <div class="mask">
+                <div class="d-flex justify-content-start align-items-end h-100">
+                  <h5><span class="badge bg-primary ms-2">New</span></h5>
+                </div>
+              </div>
+              <div class="hover-overlay">
+                <div
+                  class="mask"
+                  style="background-color: rgba(251, 251, 251, 0.15);"
+                ></div>
+              </div>
+            </a>
+          </div>
+          <div class="card-body">
+            <a href="" class="text-reset">
+              <h5 class="card-title mb-3">Product name</h5>
+            </a>
+            <a href="" class="text-reset">
+              <p>Category</p>
+            </a>
+            <h6 class="mb-3">$61.99</h6>
+          </div>
+        </div>
+      </div>
 
-  <!-- Controls -->
-  <button
-    class="carousel-control-prev"
-    type="button"
-    data-mdb-target="#carouselMDExample"
-    data-mdb-slide="prev"
-  >
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Previous</span>
-  </button>
-  <button
-    class="carousel-control-next"
-    type="button"
-    data-mdb-target="#carouselMDExample"
-    data-mdb-slide="next"
-  >
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Next</span>
-  </button>
-  <!-- Controls -->
+      <div class="col-lg-4 col-md-6 mb-4">
+        <div class="card">
+          <div
+            class="bg-image hover-zoom ripple ripple-surface ripple-surface-light"
+            data-mdb-ripple-color="light"
+          >
+            <img
+              src="../assets/images/black.jpg"
+              class="w-100"
+            />
+            <a href="#!">
+              <div class="mask">
+                <div class="d-flex justify-content-start align-items-end h-100">
+                  <h5><span class="badge bg-success ms-2">Eco</span></h5>
+                </div>
+              </div>
+              <div class="hover-overlay">
+                <div
+                  class="mask"
+                  style="background-color: rgba(251, 251, 251, 0.15);"
+                ></div>
+              </div>
+            </a>
+          </div>
+          <div class="card-body">
+            <a href="" class="text-reset">
+              <h5 class="card-title mb-3">Product name</h5>
+            </a>
+            <a href="" class="text-reset">
+              <p>Category</p>
+            </a>
+            <h6 class="mb-3">$61.99</h6>
+          </div>
+        </div>
+      </div>
 
-  <!-- Thumbnails -->
-  <div class="carousel-indicators" style="margin-bottom: -20px;">
-    <button
-      type="button"
-      data-mdb-target="#carouselMDExample"
-      data-mdb-slide-to="0"
-      class="active"
-      aria-current="true"
-      aria-label="Slide 1"
-      style="width: 100px;"
-    >
-      <img
-        class="d-block w-100 shadow-1-strong rounded img-fluid"
-        src="../assets/images/Smirnoff.png"
-        
-      />
-    </button>
-    <button
-      type="button"
-      data-mdb-target="#carouselMDExample"
-      data-mdb-slide-to="1"
-      aria-label="Slide 2"
-      style="width: 100px;"
-    >
-      <img
-        class="d-block w-100 shadow-1-strong rounded img-fluid"
-        src="../assets/images/jameson.jpg"
-        
-      />
-    </button>
-    <button
-      type="button"
-      data-mdb-target="#carouselMDExample"
-      data-mdb-slide-to="2"
-      aria-label="Slide 3"
-      style="width: 100px;"
-    >
-      <img
-        class="d-block w-100 shadow-1-strong rounded img-fluid"
-        src="../assets/images/black.jpg"
-        
-      />
-    </button>
+      <div class="col-lg-4 col-md-6 mb-4">
+        <div class="card">
+          <div class="bg-image hover-zoom ripple" data-mdb-ripple-color="light">
+            <img
+              src="../assets/images/jameson.jpg"
+              class="w-100"
+            />
+            <a href="#!">
+              <div class="mask">
+                <div class="d-flex justify-content-start align-items-end h-100">
+                  <h5><span class="badge bg-danger ms-2">-10%</span></h5>
+                </div>
+              </div>
+              <div class="hover-overlay">
+                <div
+                  class="mask"
+                  style="background-color: rgba(251, 251, 251, 0.15);"
+                ></div>
+              </div>
+            </a>
+          </div>
+          <div class="card-body">
+            <a href="" class="text-reset">
+              <h5 class="card-title mb-3">Product name</h5>
+            </a>
+            <a href="" class="text-reset">
+              <p>Category</p>
+            </a>
+            <h6 class="mb-3">
+              <s>$61.99</s><strong class="ms-2 text-danger">$50.99</strong>
+            </h6>
+          </div>
+        </div>
+      </div>
+    </div>
+        <div class="row">
+      <div class="col-lg-4 col-md-12 mb-4">
+        <div class="card">
+          <div
+            class="bg-image hover-zoom ripple ripple-surface ripple-surface-light"
+            data-mdb-ripple-color="light"
+          >
+            <img
+              src="../assets/images/Smirnoff.png"
+              class="w-100"
+            />
+            <a href="#!">
+              <div class="mask">
+                <div class="d-flex justify-content-start align-items-end h-100">
+                  <h5><span class="badge bg-primary ms-2">New</span></h5>
+                </div>
+              </div>
+              <div class="hover-overlay">
+                <div
+                  class="mask"
+                  style="background-color: rgba(251, 251, 251, 0.15);"
+                ></div>
+              </div>
+            </a>
+          </div>
+          <div class="card-body">
+            <a href="" class="text-reset">
+              <h5 class="card-title mb-3">Product name</h5>
+            </a>
+            <a href="" class="text-reset">
+              <p>Category</p>
+            </a>
+            <h6 class="mb-3">$61.99</h6>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6 mb-4">
+        <div class="card">
+          <div
+            class="bg-image hover-zoom ripple ripple-surface ripple-surface-light"
+            data-mdb-ripple-color="light"
+          >
+            <img
+              src="../assets/images/pink_gin.jpg"
+              class="w-100"
+            />
+            <a href="#!">
+              <div class="mask">
+                <div class="d-flex justify-content-start align-items-end h-100">
+                  <h5><span class="badge bg-success ms-2">Eco</span></h5>
+                </div>
+              </div>
+              <div class="hover-overlay">
+                <div
+                  class="mask"
+                  style="background-color: rgba(251, 251, 251, 0.15);"
+                ></div>
+              </div>
+            </a>
+          </div>
+          <div class="card-body">
+            <a href="" class="text-reset">
+              <h5 class="card-title mb-3">Product name</h5>
+            </a>
+            <a href="" class="text-reset">
+              <p>Category</p>
+            </a>
+            <h6 class="mb-3">$61.99</h6>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6 mb-4">
+        <div class="card">
+          <div class="bg-image hover-zoom ripple" data-mdb-ripple-color="light">
+            <img
+              src="../assets/images/420279-EA-515x515.jpg"
+              class="w-100"
+            />
+            <a href="#!">
+              <div class="mask">
+                <div class="d-flex justify-content-start align-items-end h-100">
+                  <h5><span class="badge bg-danger ms-2">-10%</span></h5>
+                </div>
+              </div>
+              <div class="hover-overlay">
+                <div
+                  class="mask"
+                  style="background-color: rgba(251, 251, 251, 0.15);"
+                ></div>
+              </div>
+            </a>
+          </div>
+          <div class="card-body">
+            <a href="" class="text-reset">
+              <h5 class="card-title mb-3">Product name</h5>
+            </a>
+            <a href="" class="text-reset">
+              <p>Category</p>
+            </a>
+            <h6 class="mb-3">
+              <s>$61.99</s><strong class="ms-2 text-danger">$50.99</strong>
+            </h6>
+          </div>
+        </div>
+      </div>
+    </div>
+        <div class="row">
+      <div class="col-lg-4 col-md-12 mb-4">
+        <div class="card">
+          <div
+            class="bg-image hover-zoom ripple ripple-surface ripple-surface-light"
+            data-mdb-ripple-color="light"
+          >
+            <img
+              src="../assets/images/blacklabel.jpg"
+              class="w-100"
+            />
+            <a href="#!">
+              <div class="mask">
+                <div class="d-flex justify-content-start align-items-end h-100">
+                  <h5><span class="badge bg-primary ms-2">New</span></h5>
+                </div>
+              </div>
+              <div class="hover-overlay">
+                <div
+                  class="mask"
+                  style="background-color: rgba(251, 251, 251, 0.15);"
+                ></div>
+              </div>
+            </a>
+          </div>
+          <div class="card-body">
+            <a href="" class="text-reset">
+              <h5 class="card-title mb-3">Product name</h5>
+            </a>
+            <a href="" class="text-reset">
+              <p>Category</p>
+            </a>
+            <h6 class="mb-3">$61.99</h6>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6 mb-4">
+        <div class="card">
+          <div
+            class="bg-image hover-zoom ripple ripple-surface ripple-surface-light"
+            data-mdb-ripple-color="light"
+          >
+            <img
+              src="https://mdbcdn.b-cdn.net/img/Photos/Horizontal/E-commerce/Products/img%20(4).webp"
+              class="w-100"
+            />
+            <a href="#!">
+              <div class="mask">
+                <div class="d-flex justify-content-start align-items-end h-100">
+                  <h5><span class="badge bg-success ms-2">Eco</span></h5>
+                </div>
+              </div>
+              <div class="hover-overlay">
+                <div
+                  class="mask"
+                  style="background-color: rgba(251, 251, 251, 0.15);"
+                ></div>
+              </div>
+            </a>
+          </div>
+          <div class="card-body">
+            <a href="" class="text-reset">
+              <h5 class="card-title mb-3">Product name</h5>
+            </a>
+            <a href="" class="text-reset">
+              <p>Category</p>
+            </a>
+            <h6 class="mb-3">$61.99</h6>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6 mb-4">
+        <div class="card">
+          <div class="bg-image hover-zoom ripple" data-mdb-ripple-color="light">
+            <img
+              src="https://mdbcdn.b-cdn.net/img/Photos/Horizontal/E-commerce/Products/shoes%20(3).webp"
+              class="w-100"
+            />
+            <a href="#!">
+              <div class="mask">
+                <div class="d-flex justify-content-start align-items-end h-100">
+                  <h5><span class="badge bg-danger ms-2">-10%</span></h5>
+                </div>
+              </div>
+              <div class="hover-overlay">
+                <div
+                  class="mask"
+                  style="background-color: rgba(251, 251, 251, 0.15);"
+                ></div>
+              </div>
+            </a>
+          </div>
+          <div class="card-body">
+            <a href="" class="text-reset">
+              <h5 class="card-title mb-3">Product name</h5>
+            </a>
+            <a href="" class="text-reset">
+              <p>Category</p>
+            </a>
+            <h6 class="mb-3">
+              <s>$61.99</s><strong class="ms-2 text-danger">$50.99</strong>
+            </h6>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
   </div>
-  <!-- Thumbnails -->
-</div>
-</div>
+</section>
   <footer>
 <div class="d-flex flex-column flex-md-row text-center text-md-start justify-content-between py-4 px-4 px-xl-5 bg-primary">
 <div class="text-white mb-3 mb-md-0">
 Copyright © 2022. All rights reserved.
 </div>
 <div class="text-white mb-3 mb-md-0">
-Not to sale to the persons under the age of 18<i class="flag flag-south-africa"></i>
+Not for sale to the persons under the age of 18<i class="flag flag-south-africa"></i>
 </div>
 
 </div>
@@ -144,8 +372,9 @@ footer {
 #carouselMDExample{
   background: blue
 }
-.front:hover{
-  mask-type: 
-
+.background{
+background: rgb(182, 179, 179);
 }
+
+
 </style>

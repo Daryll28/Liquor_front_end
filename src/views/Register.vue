@@ -1,5 +1,5 @@
  <template>
- <section class="vh-100 bg-image">
+ <section id="background" class="vh-100 bg-image">
 
 
 
@@ -50,7 +50,7 @@
                 <button type="submit" class="btn btn-success btn-block btn-lg gradient-custom-4 text-body">Register</button>
                 </div>
 
-                <p class="text-center text-muted mt-5 mb-0">Have an account? <a href="/" class="fw-bold text-body"><u>Login here</u></a></p>
+                <p class="text-center text-muted mt-5 mb-0">Have an account? <a href="/login" class="fw-bold text-body"><u>Login here</u></a></p>
 
               </form>
 
@@ -68,7 +68,7 @@
   </div>
 
   <div class="text-white mb-3 mb-md-0">
-  Created by Daryll Grainger
+Not for sale to the persons under the age of 18<i class="flag flag-south-africa"></i>
   </div>
 
   </div>
@@ -136,6 +136,9 @@ footer{
   position: fixed;
   width: 100%;
   
+}
+#background{
+  background: rgb(182, 179, 179);
 }
 
 

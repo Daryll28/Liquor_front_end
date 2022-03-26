@@ -23,14 +23,9 @@
   </div>
 
   <!-- 2 column grid layout for inline styling -->
-  <div class="row mb-4">
-
-
-    <div class="col">
-      <!-- Simple link -->
-      <a href="#!">Forgot password?</a>
-    </div>
-  </div>
+<br>
+<br>
+<br>
 
   <!-- Submit button -->
   <button type="submit" class="btn btn-primary btn-block mb-4">Sign in</button>
@@ -40,17 +35,17 @@
 </form>
 </div>
 
-  <!-- <footer>
+  <footer>
 <div class="d-flex flex-column flex-md-row text-center text-md-start justify-content-between py-4 px-4 px-xl-5 bg-primary">
 <div class="text-white mb-3 mb-md-0">
 Copyright © 2022. All rights reserved.
 </div>
 <div class="text-white mb-3 mb-md-0">
-Not to sale to the persons under the age of 18<i class="flag flag-south-africa"></i>
+Not for sale to the persons under the age of 18<i class="flag flag-south-africa"></i>
 </div>
 
 </div>
-</footer> -->
+</footer>
 
 
 </template>
@@ -89,7 +84,7 @@ admin()
             localStorage.setItem("jwt", JSON.stringify(json.jwt));
           }
           if(localStorage.getItem("jwt")){
-            this.$router.push({ name: "Home" });
+            this.$router.push({ name: "Products" });
           }
           else{
             alert("Incorrect Credentials");
