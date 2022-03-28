@@ -1,9 +1,10 @@
 <template>
+
     <section style="background-color: rgb(182, 179, 179)">
    
   <div class="container py-5">
       <h1>welcome to our products</h1>
-    <div class="row">
+    <div id="products"  class="row">
       <div class="col-md-12 col-lg-4 mb-4 mb-lg-0">
         <div class="card">
           <div class="d-flex justify-content-between p-3">
@@ -348,7 +349,7 @@
             </div>
           </div>
           <img
-            src="https://mdbcdn.b-cdn.net/img/Photos/Horizontal/E-commerce/Products/5.webp"
+            src="../assets/images/strawberry_lipz.jpg"
             class="card-img-top"
             alt="Gaming Laptop"
           />
@@ -392,14 +393,36 @@ Not for sale to the persons under the age of 18<i class="flag flag-south-africa"
 </template>
 <script>
 export default {
-    data(){
-        return {
+        data() {
+          return{
             product:null,
-            
-        }
+          }
+        },
+      METHODS: {
+        createProduct() {
+      // console.log(this.title, this.categories, this.desc, this.price, this.img, this.desc)
+      fetch("https://my-projecto-1.herokuapp.com/products", {
+        method: "POST",
+        body: JSON.stringify({
+          name: this.name,
+          category: this.category,
+          price: this.price,
+          img: this.img,
+        }),
+        headers: {
+          "Content-type": "application/json; charset=UTF-8",
+        },
+      })
+        .then((response) => response.json())
+        .then((response) => console.log(response))
+        .then(() => {
+          alert("Product Created");
+          return this.$router.push({ name: "Products" });
+        });
     },
-    mounted() {
-    fetch("https://ecom-store-arden.herokuapp.com/product", {
+      },
+      mounted() {
+      fetch("https://my-projecto-1.herokuapp.com/products", {
       method: "GET",
       headers: {
         "Content-type": "application/json; charset=UTF-8",
@@ -409,8 +432,19 @@ export default {
       .then((json) => {
         this.product = json;
       });
+      }
+  //   fetch("", {
+  //     method: "GET",
+  //     headers: {
+  //       "Content-type": "application/json; charset=UTF-8",
+  //     },
+  //   })
+  //     .then((response) => response.json())
+  //     .then((json) => {
+  //       this.product = json;
+  //     });
 
-  },
+  // },
 }
 </script>
 <style>

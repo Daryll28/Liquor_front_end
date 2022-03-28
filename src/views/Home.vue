@@ -263,7 +263,7 @@
             data-mdb-ripple-color="light"
           >
             <img
-              src="https://mdbcdn.b-cdn.net/img/Photos/Horizontal/E-commerce/Products/img%20(4).webp"
+              src="../assets/images/hennessy.jpg"
               class="w-100"
             />
             <a href="#!">
@@ -296,7 +296,7 @@
         <div class="card">
           <div class="bg-image hover-zoom ripple" data-mdb-ripple-color="light">
             <img
-              src="https://mdbcdn.b-cdn.net/img/Photos/Horizontal/E-commerce/Products/shoes%20(3).webp"
+              src="../assets/images/strawberry_lipz.jpg"
               class="w-100"
             />
             <a href="#!">
